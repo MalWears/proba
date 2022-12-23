@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  firebaseAPIKey: 'AIzaSyCnoCP284N1pKMsTPpXzF-j_pN9SXRGxSg'\n};","map":null,"metadata":{},"sourceType":"module"}

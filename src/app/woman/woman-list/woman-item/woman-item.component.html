@@ -1,0 +1,18 @@
+<a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  target="_self"
+  class="card">
+  <div class="cards-container">
+    <div  class="card">
+      <img
+          [src]="product.imagePath"
+          alt="{{ product.name }}"
+          class="img-responsive">
+          <div class="title">{{ product.name }}</div>
+          <div class="price"> {{[product.price]}}</div>
+          <div class="description"> {{ product.description }}</div>  
+    </div>
+  </div>
+</a>

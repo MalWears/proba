@@ -1,0 +1,65 @@
+a.navbar-brand{
+    padding-top: 7px;
+    color: rgb(33, 9, 43);
+    font-size: 22px;
+}
+
+nav{ 
+    padding-top: 10px;
+    padding-right: 10px;
+    width: 100vw;
+    align-items: center;
+    margin: auto;
+}
+
+a{ 
+    position: relative;
+    text-decoration:  none;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: .7px;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+a:before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 0;
+    background-color: blue;
+    transition: .5s;
+
+}
+a::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 0;
+    background-color: yellow;
+    transition: .5s;
+
+}
+
+a:after{
+    left: 0;
+    bottom: -4px;
+
+}
+
+a:before{
+    right: 0;
+    top: -4px;
+}
+
+a:hover:after,
+a:hover:before{
+    width: 100%;
+}
+mat-icon.icon{
+    padding-top: 4px;
+    
+}
+a.login{
+    padding-top: 7px;
+}
