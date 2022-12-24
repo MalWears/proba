@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/woman/product.model';
@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/woman/product.service';
   templateUrl: './woman-list.component.html',
   styleUrls: ['./woman-list.component.css']
 })
-export class WomanListComponent implements OnInit {
+export class WomanListComponent implements OnInit,OnDestroy {
 
   products: Product[];
   subscription: Subscription;
@@ -20,6 +20,13 @@ export class WomanListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.subscription = this.productService.productsChanged
+    .subscribe(
+      (products: Product[]) => {
+        this.products = products;
+        console.log ('from woman-list.subscription', this.products)
+      }
+    );
     this.products = this.productService.getProducts();
   }
 

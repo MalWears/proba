@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -37,19 +36,18 @@ import { ProductService } from './woman/product.service';
     DropdownDirective,
     WomanStartComponent,
     WomanEditComponent,
-    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    AppRoutingModule,
+        
   ],
-  providers: [ProductService],
-  bootstrap: [AppComponent,]
+  providers: [ProductService,  ],
+  bootstrap: [AppComponent,  ]
 })
 export class AppModule { }

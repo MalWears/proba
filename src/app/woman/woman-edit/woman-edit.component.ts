@@ -11,13 +11,11 @@ import { ProductService } from '../product.service';
 export class WomanEditComponent implements OnInit {
   id: number;
   editMode = false;
-
   productForm: FormGroup;
 
   constructor(private route: ActivatedRoute,
     private productService: ProductService,
-    private router: Router) {
-}
+    private router: Router) {}
 
   ngOnInit() {
     this.route.params

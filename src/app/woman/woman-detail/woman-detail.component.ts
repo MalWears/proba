@@ -10,8 +10,6 @@ import { ProductService } from 'src/app/woman/product.service';
   styleUrls: ['./woman-detail.component.css']
 })
 export class WomanDetailComponent implements OnInit {
-  
-
   product: Product;
   id: number;
 
@@ -34,6 +32,11 @@ export class WomanDetailComponent implements OnInit {
   onEditProduct() {
     this.router.navigate(['edit'], {relativeTo: this.route});
     // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
+  }
+
+  onDeleteRecipe() {
+    this.productService.deleteProduct(this.id);
+    this.router.navigate(['/woman']);
   }
 
 }
